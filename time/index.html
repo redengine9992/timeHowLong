@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="content">	
+			<!--//80 岁 4160周 活了多久-->
+			<header style="text-align: center;">时间过了多久</header>
+			年龄：<input type="text" name="" class="age" value="" />
+			年数：<select name="" class="years">
+				<option value="60">60岁</option>
+				<option value="70">70岁</option>
+				<option value="80">80岁</option>
+				<option value="90">90岁</option>
+				<option value="100">100岁</option>
+			</select>
+			
+			<input type="button" name="" id="bun" value="确定" />
+			<table border="1" cellspacing="1" cellpadding="1">
+				<!--<tr>
+					<th></th>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>-->
+			</table>
+		</div>
+		
+	</body>
+	<script src="js/setRootRem750.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			var html_ = "";
+			for(var i=1;i<=30;i++){
+					html_+='<tr>'
+					for(var j=1;j<=52;j++){
+						html_+='<td></td>';
+					}
+					html_+='</tr>'
+				}
+				$('table').html(html_)
+     			
+			$('#bun').click(function(){
+			var myDate = new Date()
+//			var year = myDate.toLocaleString();
+			//获取年
+			var year = myDate.getFullYear(); //2018
+			var timestamp1 = Date.parse(new Date());//当前时间
+			var timestamp = Date.parse(new Date(year+'-01-01'));//本年1月1日时间
+				var jfuj = timestamp1-timestamp
+				var second = (jfuj/1000/60/60/24);//本年过去了多少天
+				var week = (second/7)+1
+				var week_ = week.toFixed(0)//强制保留0位小数
+				var nu = parseInt(week_)
+				var html_ = "";
+				var age_ = $('.age').val();
+				var years_ = $('.years').val();
+				
+				for(var i=1;i<=years_;i++){
+					html_+='<tr>'
+					for(var j=1;j<=52;j++){
+						html_+='<td></td>';
+					}
+					html_+='</tr>'
+				}
+				$('table').html(html_)
+//						var td_ = $('td').length;
+//						console.log(td_)
+				for(var i=0;i<(age_*52)+nu;i++){
+					$('td').eq(i).css('background','red')
+				}
+				
+				
+			})
+		})
+		
+		
+	</script>
+	
+</html>

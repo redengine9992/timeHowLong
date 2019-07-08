@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/* css reset */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd,
+ul,
+ol,
+pre,
+form,
+input,
+textarea,
+th,
+td,
+select {
+	margin: 0;
+	padding: 0;
+}
+
+em {
+	font-style: normal;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+}
+
+
+/* CSS position */
+
+.center {
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.pr {
+	position: relative;
+}
+
+.pa {
+	position: absolute;
+}
+
+.clear {
+	clear: both;
+}
+
+.clearFix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+
+/*长度高宽*/
+
+.w {
+	width: 100%;
+}
+
+.h {
+	height: 100%;
+}
+*{
+box-sizing: border-box;
+}
+body{
+	background:#b9e0ff ;
+}
+.content{
+	max-width: 7.5rem;
+	/*height: 30rem;*/
+	margin: auto;
+	font-size: .30rem;
+	/*padding: 0 .16rem;*/
+	box-sizing: border-box;
+	/**/
+	/*border: 1px solid red;*/
+}
+
+table{
+	float: left;
+	width: 7.5rem;
+	height: 20px;
+	/*background: red;*/
+}
+table tr td{
+	width: 10px;
+	height: 10px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
